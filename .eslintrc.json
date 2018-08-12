@@ -1,9 +1,16 @@
 {
-    "extends": "airbnb",
+    "extends": [
+        "airbnb",
+        "plugin:react/recommended"
+    ],
     "env": {
-        "es6": true
+        "es6": true,
+        "browser": true
     },
     "rules": {
-        "linebreak-style": ["error", "windows"]
+        "linebreak-style": ["error", "windows"],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error"
     }
 }
