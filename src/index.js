@@ -1,11 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
 
-const title = 'Hello, Vitalii';
+import App from './App';
+import rootReducer from './reducers/rootReducer';
+
+const store = createStore(rootReducer);
 
 ReactDOM.render(
-<div>{title}</div>,
-document.getElementById('root')
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
 );
 
 module.hot.accept();
