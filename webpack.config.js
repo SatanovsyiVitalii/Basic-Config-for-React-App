@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
@@ -19,7 +20,8 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: ['*', '.js', '.jsx'],
+    modules: ['node_modules', path.resolve(__dirname, 'src') ],
   },
   output: {
     path: __dirname + '/dist',

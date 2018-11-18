@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Text from './components/Text/Text';
+import { Friends } from 'components';
 
 const App = () => (
   <div>
-    <Text />
+    <Friends />
   </div>
 );
 
